@@ -1,31 +1,35 @@
-# main.py
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 import pandas as pd
 from pathlib import Path
 from src.features.feature_pipeline import preprocess_data
 
+from src.target.rfm_target import calculate_rfm, cluster_rfm, assign_high_risk
+
 def main():
     # Load raw data
-    data_path = Path("data/raw/data.csv")
-    if not data_path.exists():
-        print(f"File not found: {data_path}")
-        return
-
-    df = pd.read_csv(data_path)
-
-    # Optional: Check raw shape
+    df = pd.read_csv("./data/raw/data.csv")
     print(f"Raw data shape: {df.shape}")
 
-    # Process features
-    print("Running feature pipeline...")
+    # Feature Engineering (Task 3)
+    from src.features.feature_pipeline import preprocess_data
     X = preprocess_data(df)
-
-    # Show result
     print(f"Feature matrix shape: {X.shape}")
 
-    # Optional: Save processed features (as NumPy array or sparse matrix)
-    # from scipy.sparse import save_npz
-    # save_npz("data/processed_features.npz", X)
+    # RFM Target Variable Engineering (Task 4)
+    rfm_df = calculate_rfm(df)
+    clustered_rfm = cluster_rfm(rfm_df)
+    risk_labels = assign_high_risk(clustered_rfm)
+
+    # Merge high-risk label back to original df
+    df = df.merge(risk_labels, on="CustomerId", how="left")
+    df['is_high_risk'] = df['is_high_risk'].fillna(0).astype(int)
+
+    print("\nSample with is_high_risk target column:")
+    print(df[['CustomerId', 'is_high_risk']].drop_duplicates().head())
 
 if __name__ == "__main__":
     main()
+

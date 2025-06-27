@@ -1,5 +1,3 @@
-# src/features/encoders.py
-
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
 

@@ -1,5 +1,3 @@
-# src/features/scalers.py
-
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 

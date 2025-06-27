@@ -1,5 +1,3 @@
-# src/features/aggregate_features.py
-
 import pandas as pd
 
 def add_aggregate_features(df):
