@@ -2,6 +2,14 @@
 
 ## Credit Scoring Business Understanding
 
+## Exploratory Data Analysis (EDA) Insights
+
+1. **Data Completeness and Quality**: The dataset contains no missing values in any column, ensuring a clean foundation for modeling and eliminating the need for imputation or special handling of missing data.
+
+2. **Feature Distributions and Outliers**: Numerical features such as `Amount` and `Value` exhibit skewed distributions and contain outliers, as revealed by histograms and boxplots. Categorical features show varying frequencies, with some dominant and some rare categories, which may impact model encoding and performance.
+
+3. **Relationships Between Features**: Correlation analysis among numeric features highlights how variables relate to each other. For example, strong or weak correlations can inform feature selection and engineering for modeling.
+
 ### 1. Basel II and the Need for Interpretable, Documented Models
 
 The Basel II Accord emphasizes accurate **risk measurement** to ensure banks hold enough capital against potential losses. This regulatory focus requires credit scoring models to be **interpretable**, **transparent**, and **well-documented** so that decisions (like loan approvals or rejections) can be clearly explained to regulators, auditors, and stakeholders. Black-box models without clear reasoning can lead to compliance issues and undermine trust.
