@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.venv/
+.ENV/
+eda-env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment files
+.env
+*.env
+
+# Mac / Windows system files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# VS Code settings (optional)
+.vscode/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+
+# Data files (optional - if you don’t want large datasets tracked)
+*.csv
+*.xlsx
+*.parquet
+*.json
+
+# Dependency lock files (optional)
+poetry.lock
+Pipfile.lock
+
+data/
