@@ -42,4 +42,3 @@ dist/
 
 # Dependency lock files (optional)
 poetry.lock
-Pipfile.lock
