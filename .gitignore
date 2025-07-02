@@ -3,61 +3,45 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# C extensions
-*.so
+# Virtual environment
+venv/
+env/
+.venv/
+.ENV/
+eda-env/
 
 # Jupyter Notebook checkpoints
-.ipynb_checkpoints
+.ipynb_checkpoints/
 
-# Virtual environment
-.env/
-.venv/
-env/
-venv/
-
-# Environment variables
+# Environment files
+.env
 *.env
 
-# MLflow artifacts
-mlruns/
-
-# VS Code settings
-.vscode/
-
-# Mac OS & Linux
+# Mac / Windows system files
 .DS_Store
 Thumbs.db
 
 # Logs and temporary files
 *.log
 *.tmp
+*.bak
+
+# VS Code settings (optional)
+.vscode/
 
 # Python packaging
-*.egg-info/
 build/
 dist/
-.eggs/
+*.egg-info/
 
-# Test and coverage
-htmlcov/
-.tox/
-.nox/
-.coverage
-coverage.xml
-.cache
-pytest_cache/
+# Data files (optional - if you don’t want large datasets tracked)
+*.csv
+*.xlsx
+*.parquet
+*.json
 
-# Docker
-*.pid
+# Dependency lock files (optional)
+poetry.lock
+Pipfile.lock
 
-# Data folders
 data/
-!data/.gitkeep
-
-# Model artifacts
-models/
-*.pkl
-*.joblib
-
-# CI/CD secrets or credentials
-secrets.yml
