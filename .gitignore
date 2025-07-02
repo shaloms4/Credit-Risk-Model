@@ -1,0 +1,63 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Virtual environment
+.env/
+.venv/
+env/
+venv/
+
+# Environment variables
+*.env
+
+# MLflow artifacts
+mlruns/
+
+# VS Code settings
+.vscode/
+
+# Mac OS & Linux
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Python packaging
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Test and coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+coverage.xml
+.cache
+pytest_cache/
+
+# Docker
+*.pid
+
+# Data folders
+data/
+!data/.gitkeep
+
+# Model artifacts
+models/
+*.pkl
+*.joblib
+
+# CI/CD secrets or credentials
+secrets.yml
