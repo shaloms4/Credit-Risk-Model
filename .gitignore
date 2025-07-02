@@ -39,6 +39,3 @@ dist/
 *.xlsx
 *.parquet
 *.json
-
-# Dependency lock files (optional)
-poetry.lock
